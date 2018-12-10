@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="row" v-else>
-      <div class="col-sm-3">
+      <div class="col-md-3">
         <hero
           v-for="hero in heroes"
           :hero="hero"
@@ -14,7 +14,7 @@
         />
       </div>
 
-      <div class="col-sm-9">
+      <div class="col-md-9">
         <div class="position-fixed">
           <router-view/>
         </div>

@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-muted">Click one of the heroes to see details</h1>
+  <h1 class="text-muted">Click details to see more</h1>
 </template>
 
 <script>
