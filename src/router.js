@@ -16,5 +16,26 @@ export default new Router({
       name: 'home',
       component: Home,
     },
+    {
+      path: '/heroes',
+      component: () => import(/* webpackChunkName: "heroes" */ './views/Heroes.vue'),
+      children: [
+        {
+          path: '',
+          name: 'heroes',
+          component: () => import(/* webpackChunkName: "info" */ './components/Info.vue'),
+        },
+        {
+          path: ':id',
+          name: 'hero-details',
+          component: () => import(/* webpackChunkName: "hero-details" */ './components/HeroDetails.vue'),
+        },
+      ],
+    },
+    {
+      path: '*',
+      name: 'not-found',
+      component: () => import(/* webpackChunkName: "not-found" */ './views/NotFound.vue'),
+    },
   ],
 });
